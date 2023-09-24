@@ -1,0 +1,25 @@
+.cat-info {
+    display: flex;
+    gap: 15px;
+    font-size: 20px;
+    margin-top: 15px;
+    align-items: center;    
+}
+
+.is-hidden {
+    display: none;
+}
+
+body {
+    padding: 15px;
+}
+
+.box {
+    width: 450px;
+}
+
+.error {
+    color: tomato;
+    font-weight: 700;
+    font-size: 24px;
+}
