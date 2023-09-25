@@ -6,12 +6,12 @@ const API_KEY = "live_i0tDaOGInqQ26rh7JUwZgUxN2ia9tgGfeQAmLlGg5e4sjZuijJKVoZO121
 axios.defaults.headers.common["x-api-key"] = API_KEY;
 
 export function fetchBreeds() {
-    return fetch(`${BASE_URL}/breeds?api_key=${API_KEY}`)
+    return axios.get(`${BASE_URL}/breeds?api_key=${API_KEY}`)
         .then(response => {
-            if (!response.ok) {
+            if (response.status !== 200) {
                 throw new Error(response.status);
             }
-            return response.json();
+            return response.data;
         });       
 };
 
